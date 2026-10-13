@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Ribeiro | Materiais de construção</title>
+ 
+    <style>
+    .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+ header.logo-img{
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  flex-shrink: 0;
+  background-color: white;
+  border-radius: 8px;
+  padding: 4px;
+}
+.marca h1 {
+  font-size: 28px;
+  margin: 0;
+}
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f7fc;
+            color: #10213e;
+        }
+        header{
+            background-color: #061747;
+            color: white;
+            padding: 20px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .logo {
+            font-size: 32px;
+            font-weight: 900;
+        }
+        .logo span{
+            color: #16d9ef;
+        }
+        nav {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        nav a :hover{
+            color: #16d9ef;
+        }
+        .botao {
+            display: inline-block;
+            background-color: #08c84a;
+            color: white;
+            padding: 15px 23px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .botao:hover{
+            transform: translateY(-3px);
+            background-color: #06aa3e;
+        }
+        .hero {
+  background: linear-gradient(120deg, #04133d, #0754a0, #0878a7);
+  color: white;
+  padding: 85px 7%;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-conteudo {
+  max-width: 750px;
+}
+
+.destaque {
+  color: #4de8f4;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 7vw, 72px);
+  line-height: 1;
+  margin: 22px 0;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+  color: #e0edff;
+}
+
+section {
+  padding: 55px 6%;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 15px;
+  color: #061747;
+}
+
+.subtitulo {
+  text-align: center;
+  color: #68758c;
+  margin: 0 auto 35px;
+  line-height: 1.6;
+}
+
+.beneficios,
+.categorias,
+.redes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.cartao {
+  background: white;
+  border: 1px solid #e5ebf5;
+  border-radius: 17px;
+  padding: 25px 20px;
+  box-shadow: 0 8px 25px #09205210;
+}
+
+.cartao h3 {
+  margin: 12px 0;
+}
+
+.cartao p {
+  color: #68758c;
+  line-height: 1.6;
+}
+
+.emoji {
+  font-size: 36px;
+}
+
+.beneficio {
+  text-align: center;
+}
+
+.fundo-branco {
+  background: white;
+}
+
+.categoria {
+  background: linear-gradient(135deg, #08235b, #0877a8);
+  color: white;
+  padding: 27px 20px;
+  min-height: 145px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.categoria:hover {
+  transform: translateY(-5px);
+}
+
+.categoria strong {
+  font-size: 19px;
+}
+
+.categoria small {
+  color: #c7f6ff;
+  margin-top: 12px;
+}
+
+.chamada {
+  background: linear-gradient(120deg, #071747, #0a568d);
+  color: white;
+  text-align: center;
+}
+
+.chamada h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.chamada p {
+  margin: 15px 0 28px;
+  line-height: 1.7;
+}
+
+.redes {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.rede {
+  text-align: center;
+}
+
+.rede a {
+  color: #0754a0;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.contato {
+  background: #061747;
+  color: white;
+  text-align: center;
+}
+
+.contato h2 {
+  font-size: 36px;
+  margin-bottom: 18px;
+}
+
+.contato p {
+  line-height: 1.7;
+  margin: 15px 0 25px;
+}
+
+footer {
+  background: #020d2a;
+  color: white;
+  padding: 35px 6%;
+  text-align: center;
+  line-height: 2;
+}
+
+footer a {
+  color: #16d9ef;
+  text-decoration: none;
+}
+
+@media (max-width: 750px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .beneficios,
+  .categorias {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .redes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    padding: 60px 7%;
+  }
+}
+
+@media (max-width: 450px) {
+  .beneficios,
+  .categorias,
+  .redes {
+    grid-template-columns: 1fr;
+  }
+
+  .titulo {
+    font-size: 28px;
+  }
+
+  .chamada h2,
+  .contato h2 {
+    font-size: 29px;
+  }
+}
+</style> 
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+  <img src="logo.png" alt="Logo Ribeiro"
+  style="width: 132px; height: 132px;" object-fit="contain"
+  background-color: white; padding: 5px; border-radius: 8px;">
+  
+  </div>
+    <a href="#inicio">Início</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#redes">Redes sociais</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+  <div class="hero-conteudo">
+    <div class="destaque">RIBEIRO • PONTES E LACERDA - MT</div>
+
+    <h1>Sua obra.<br>Sua conquista.</h1> 
+
+    <p>
+      Do primeiro tijolo ao acabamento final,
+      encontre materiais para construir, reformar
+      e transformar seus planos em realidade.
+    </p>
+
+    <a class="botao whatsapp" href="#">
+      ☎ Fale conosco pelo WhatsApp
+    </a>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="beneficios">
+
+    <div class="cartao beneficio">
+      <div class="emoji">🚚</div>
+      <h3>Entrega para sua obra</h3>
+      <p>Consulte disponibilidade e condições de entrega.</p>
+    </div>
+
+    <div class="cartao beneficio">
+      <div class="emoji">🛡️</div>
+      <h3>Qualidade e confiança</h3>
+      <p>Materiais para acompanhar cada etapa do projeto.</p>
+    </div>
+
+    <div class="cartao beneficio">
+      <div class="emoji">🤝</div>
+      <h3>Atendimento próximo</h3>
+      <p>Chame nossa equipe e tire suas dúvidas.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="fundo-branco" id="produtos">
+  <h2 class="titulo">Tudo para sua obra</h2>
+
+  <p class="subtitulo">
+    Encontre o que você precisa para construir e reformar.
+  </p>
+
+  <div class="categorias">
+
+    <a class="categoria whatsapp" href="#">
+      <span class="emoji">🧱</span>
+      <strong>Cimentos e argamassas</strong>
+      <small>Consultar produtos ↗</small>
+    </a>
+
+    <a class="categoria whatsapp" href="#">
+      <span class="emoji">🚿</span>
+      <strong>Materiais hidráulicos</strong>
+      <small>Consultar produtos ↗</small>
+    </a>
+
+    <a class="categoria whatsapp" href="#">
+      <span class="emoji">💡</span>
+      <strong>Materiais elétricos</strong>
+      <small>Consultar produtos ↗</small>
+    </a>
+
+    <a class="categoria whatsapp" href="#">
+      <span class="emoji">🎨</span>
+      <strong>Tintas e pintura</strong>
+      <small>Consultar produtos ↗</small>
+    </a>
+
+    <a class="categoria whatsapp" href="#">
+      <span class="emoji">🏠</span>
+      <strong>Pisos e revestimentos</strong>
+      <small>Consultar produtos ↗</small>
+    </a>
+
+    <a class="categoria whatsapp" href="#">
+      <span class="emoji">🔨</span>
+      <strong>Ferramentas</strong>
+      <small>Consultar produtos ↗</small>
+    </a>
+
+  </div>
+</section>
+
+<section class="chamada">
+  <h2>Seu projeto merece começar bem.</h2>
+  <p>
+    Conte para a gente o que você precisa e
+    solicite seu orçamento pelo WhatsApp.
+  </p>
+
+  <a class="botao whatsapp" href="#">
+    Solicitar orçamento ↗
+  </a>
+</section>
+
+<section id="redes">
+  <h2 class="titulo">Acompanhe a Ribeiro</h2>
+
+  <p class="subtitulo">
+    Siga nossas redes sociais e acompanhe as novidades.
+  </p>
+
+  <div class="redes">
+
+    <div class="cartao rede">
+      <div class="emoji">📸</div>
+      <h3>Instagram</h3>
+      <a href="https://www.instagram.com/ribeiro_const_e_acabamentos/" target="_blank">
+        Visitar Instagram ↗
+      </a>
+    </div>
+
+    
+
+    <div class="cartao rede">
+      <div class="emoji">🎵</div>
+      <h3>TikTok</h3>
+      <a href="https://www.tiktok.com/@mayaracorondeponteselace" target="_blank">
+        Visitar TikTok ↗
+      </a>
+    </div>
+
+    
+  </div>
+</section>
+
+<section class="contato" id="contato">
+  <h2>Vamos construir algo incrível?</h2>
+
+  <p>
+    Fale com a Ribeiro, consulte nossos produtos
+    e solicite um orçamento para sua obra.
+  </p>
+
+  <a class="botao whatsapp" href="#">
+    ☎ Chamar no WhatsApp
+  </a>
+
+  <p>📍 Pontes e Lacerda - Mato Grosso</p>
+</section>
+
+</main>
+
+<footer>
+  <h3>RIBEIRO ▰</h3>
+  <p>Materiais de Construção e Acabamentos</p>
+  <p>Qualidade e confiança para cada etapa da sua obra.</p>
+  <p>
+    <a href="/https://instagram.com/mayaracoron?rpxt=MWg0ZWtpYWk1aHp0ag%3D%3D">
+      Instagram da funcionaria
+    </a>
+  </p>
+  <p>© 2026 Ribeiro. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+/* TROQUE PELO WHATSAPP DA SUA MÃE:
+   Brasil + DDD + número, somente números.
+   Exemplo fictício: 5565999999999
+*/
+const telefone = "65996808808";
+
+document.querySelectorAll(".whatsapp").forEach(function(botao) {
+  botao.href = "https://wa.me/" + telefone;
+  botao.target = "_blank";
+  botao.rel = "noopener";
+});
+</script>
+
+</body>
+</html>
